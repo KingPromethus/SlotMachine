@@ -47,6 +47,17 @@ public class SlotDisplayPanel extends JPanel {
 
     }
 
+    public String chooseImage(String[] accepted){
+        if((accepted.length <= 3) && (accepted.length > 0)){
+            return accepted[0];
+        }
+        else if(accepted.length > 3){
+            return accepted[accepted.length - 1];
+        }
+        else {
+            return null;
+        }
+    }
 
     private Image getImage(String filename){
         URL url = getClass().getResource(filename);
